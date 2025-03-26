@@ -37,15 +37,15 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 # print("Accuracy:", accuracy_score(y_test, y_pred))
 
-st.title("Dự đoán khả năng đầu tư vào tiền điện tử")
-st.write("Dự đoán khả năng đầu tư vào tiền điện tử của sinh viên dựa trên dữ liệu khảo sát")
+st.title("Dự đoán khả năng đầu tư vào tiền mã hóa")
+st.write("Dự đoán khả năng đầu tư vào tiền mã hóa của sinh viên dựa trên dữ liệu khảo sát 150 sinh viên")
 
 Year = st.selectbox("Năm học", options=[1, 2, 3, 4])
 Gender = st.selectbox("Giới tính", options=["Nam", "Nữ"])
-Invested = st.selectbox("Đã đầu tư vào tiền điện tử chưa", options=["Có", "Không"])
-Safety = st.selectbox("Cảm thấy an toàn khi đầu tư vào tiền điện tử", options=["Có", "Không"])
-Blockchain = st.selectbox("Biết về Blockchain", options=["Có", "Không"])
-Will_learn = st.selectbox("Có muốn học về tiền điện tử không", options=["Có", "Không"])
+Invested = st.selectbox("Đã đầu tư vào tiền mã hóa", options=["Có", "Không"])
+Safety = st.selectbox("Cảm thấy tiền mã hóa an toàn", options=["Có", "Không"])
+Blockchain = st.selectbox("Biết về  công nghệ Blockchain", options=["Có", "Không"])
+Will_learn = st.selectbox("Có muốn học về tiền điện tử ", options=["Có", "Không"])
 
 Gender = 1 if Gender == "Nam" else 0
 Invested = 1 if Invested == "Có" else 0
@@ -61,8 +61,8 @@ if st.button("Dự đoán"):
     a_student = pd.DataFrame([a_student]).astype(int)
     prediction = model.predict(a_student)
     if prediction == 1:
-        st.success("Sinh viên này có khả năng đầu tư vào tiền điện tử")
+        st.success("Sinh viên này có khả năng đầu tư vào tiền mã hóa")
     else:
-        st.info("Sinh viên này không có khả năng đầu tư vào tiền điện tử")
+        st.info("Sinh viên này không có khả năng đầu tư vào tiền mã hóa")
 
 
