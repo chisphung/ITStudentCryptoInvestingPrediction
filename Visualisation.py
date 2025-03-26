@@ -6,7 +6,6 @@ from sklearn.metrics import accuracy_score
 
 
 df = pd.read_excel('crypto_survey.xlsx')
-# print(df.head())
 
 df_copy = df.copy()  # Make a copy to keep the original data safe
 binary_cols = ['Safety', 'Blockchain', 'Will_invest', 'Will_learn']
