@@ -57,14 +57,14 @@ if st.button("Dự đoán"):
     prediction = model.predict(a_student)
     if Invested == 1:
         if prediction == 1:
-            st.write("Sinh viên này có khả năng sẽ đầu tư sâu hơn vào tiền mã hóa")
+            st.success("Sinh viên này có khả năng sẽ đầu tư sâu hơn vào tiền mã hóa")
         else:
-            st.write("Sinh viên này sẽ có khả năng không đầu tư sâu hơn vào tiền mã hóa")
+            st.info("Sinh viên này sẽ có khả năng không đầu tư sâu hơn vào tiền mã hóa")
     else:
         if prediction == 1:
-            st.write("Sinh viên này có khả năng sẽ đầu tư vào tiền mã hóa")
+            st.success("Sinh viên này có khả năng sẽ đầu tư vào tiền mã hóa")
         else:
-            st.write("Sinh viên này có khả năng sẽ không đầu tư vào tiền mã hóa")
+            st.info("Sinh viên này có khả năng sẽ không đầu tư vào tiền mã hóa")
 
 
 
