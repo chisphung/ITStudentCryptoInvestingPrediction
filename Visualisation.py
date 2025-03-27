@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-
 df = pd.read_excel('crypto_survey.xlsx')
 
 df_copy = df.copy()  # Make a copy to keep the original data safe
@@ -38,7 +37,7 @@ st.write("Dự đoán khả năng đầu tư vào tiền mã hóa của sinh vi�
 
 Year = st.selectbox("Năm học", options=[1, 2, 3, 4])
 Gender = st.selectbox("Giới tính", options=["Nam", "Nữ"])
-Invested = st.selectbox("Đã đầu tư vào tiền mã hóa", options=["Có", "Không"])
+Invested = st.selectbox("Đang hoặc đã từng đầu tư vào tiền mã hóa", options=["Có", "Không"])
 Safety = st.selectbox("Cảm thấy tiền mã hóa an toàn", options=["Có", "Không"])
 Blockchain = st.selectbox("Biết về  công nghệ Blockchain", options=["Có", "Không"])
 Will_learn = st.selectbox("Có muốn học về tiền điện tử ", options=["Có", "Không"])
@@ -56,9 +55,17 @@ if st.button("Dự đoán"):
     a_student = {"Year": Year, "Gender": Gender, "Invested": Invested,	"Safety": Safety,	"Blockchain": Blockchain,	"Will_learn": Will_learn}
     a_student = pd.DataFrame([a_student]).astype(int)
     prediction = model.predict(a_student)
-    if prediction == 1:
-        st.success("Sinh viên này có khả năng đầu tư vào tiền mã hóa")
+    if Invested == 1:
+        if prediction == 1:
+            st.write("Sinh viên này có khả năng sẽ đầu tư sâu hơn vào tiền mã hóa")
+        else:
+            st.write("Sinh viên này sẽ có khả năng không đầu tư sâu hơn vào tiền mã hóa")
     else:
-        st.info("Sinh viên này không có khả năng đầu tư vào tiền mã hóa")
+        if prediction == 1:
+            st.write("Sinh viên này có khả năng sẽ đầu tư vào tiền mã hóa")
+        else:
+            st.write("Sinh viên này có khả năng sẽ không đầu tư vào tiền mã hóa")
+
+
 
 
