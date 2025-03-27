@@ -42,6 +42,9 @@ The result is displayed after the user clicks the "Predict" button.
 ## Disclaimer
 This is a small project implemented by a group of students, and some survey results might be inaccurate. Please use the predictions with caution.
 If you find this project helpful, please give it a star and contribute by filling out the survey if you are an IT student.
+
 [Survey Link](https://forms.gle/7ZqBRXjbqUMQFKrs5)
+
 Our website is being deployed at the following link:
+
 [Try it](https://itcoin.streamlit.app/)
