@@ -1,6 +1,6 @@
 # IT Student Awareness about Cryptocurrency, a project for SS004.P27
 A survey conducted on 150 IT students asking about their awareness and their point of view toward cryptocurrency
-## Task manement: 
+## Task management: 
 We distributed tasks among members, held meetings, and discussed the topic. Each member actively took on tasks, and our operational plan was written in a sheet:  
 ![image](https://github.com/user-attachments/assets/572b6df3-d1d9-4473-a886-c7b4e71ecae2)
 ## Pipeline
