@@ -30,6 +30,7 @@ X_test['Invested'] = X_test['Invested'].astype(int)
 model = KNeighborsClassifier()
 model.fit(X_train, y_train)
 
+X_test.fillna(value = 0, inplace=True)
 y_pred = model.predict(X_test)
 acu = accuracy_score(y_test, y_pred)
 # print("Accuracy:", accuracy_score(y_test, y_pred))
